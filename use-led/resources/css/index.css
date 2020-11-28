@@ -96,7 +96,7 @@ section {
   min-height: 100vh;
 }
 .section-about-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
@@ -129,18 +129,71 @@ section {
 
 .section-projects {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .section-projects-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #000;
 }
 
 .section-contact {
-  background-color: cadetblue;
+  background-image: linear-gradient(135deg, #febd59, #ead4b1);
+  min-height: 200px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
 }
 
+.section-contact-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+.section-contact-button {
+  background-color: #febd59;
+  border: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  width: 260px;
+  text-transform: uppercase;
+  padding: 0.8rem 1.6rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 5px;
+}
+
+.section-contact-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.section-contact-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.section-contact-button:hover span {
+  padding-right: 25px;
+}
+
+.section-contact-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 .navbar-wrapper {
   width: 95%;
   max-width: 1000px;
@@ -307,8 +360,7 @@ header::after {
 }
 
 footer {
-  /* position: fixed; */
-  background-image: linear-gradient(135deg, #febd59, #ead4b1);
+  background-color: #333;
   width: 100%;
   left: 0;
   bottom: 0;
