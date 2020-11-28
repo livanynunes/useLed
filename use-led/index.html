@@ -1,22 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="resources/css/index.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="resources/css/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Use led by Elielson</title>
-</head>
-<body>
-    <section>sessão 01</section>
-    <section>sessão 02</section>
-    <section>sessão 03</section>
-    <section>sessão 04</section>
-    <footer>
-        <div class="container">
-            <div class="social-links-container"> 
-                fb | linkedin | instagram
-            </div>
+  </head>
+  <body>
+    <!-- <header class="first-navbar">oi</header> -->
+    <header class="second-navbar">
+      <div class="navbar-wrapper">
+        <h1 class="navbar-logo">Use<span>Led</span></h1>
+        <nav class="main-navbar">
+          <ul>
+            <li>
+              <a href="#"><i class="fa fa-home nav-icon"></i>Ínicio</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-info nav-icon"></i>Sobre</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-dollar-sign nav-icon"></i>Serviços</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-envelope nav-icon"></i>Contato</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-toggle-button">
+          <div class="hamburger"></div>
         </div>
+      </div>
+    </header>
+    <div class="sections-container">
+      <section class="section-hello">
+          <h1 class="welcome-text">
+              Olá, meu nome é <span class="highlight-text">Elielson</span>
+              <br>
+              Eu sou o criador da Use Led.
+          </h1>
+          <button class="welcome-button"><span>Saiba mais </span></button>
+      </section>
+      <section class="section-about">sessão 02</section>
+      <section class="section-services">sessão 03</section>
+      <section class="section-contact">sessão 04</section>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="social-links-container">fb | linkedin | instagram</div>
+      </div>
     </footer>
-</body>
+  </body>
+  <script src="resources/scripts/navbar.js"></script>
 </html>

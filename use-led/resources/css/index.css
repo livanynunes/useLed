@@ -2,9 +2,19 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
-h1 {
-  color: SeaGreen;
+html,
+body {
+  height: 100%;
+  overflow: hidden;
 }
+
+body {
+  margin: 0;
+}
+
+/* h1 {
+  color: SeaGreen;
+} */
 
 p,
 li {
@@ -15,9 +25,238 @@ a {
   text-decoration: none;
 }
 
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sections-container {
+  /* height: 100%; */
+}
+
+.highlight-text {
+  color: #febd59;
+}
+
+.welcome-text {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+.welcome-button {
+  background-color: #fff;
+  border: 2px solid #febd59;
+  color: #febd59;
+  text-align: center;
+  font-size: 1.2rem;
+  width: 200px;
+  text-transform: uppercase;
+  padding: 0.8rem 1.6rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.welcome-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.welcome-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.welcome-button:hover span {
+  padding-right: 25px;
+}
+
+.welcome-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.section-hello {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+.section-about {
+  background-color: cadetblue;
+}
+.section-services {
+  background-color: white;
+}
+.section-contact {
+  background-color: cadetblue;
+}
+
+.navbar-wrapper {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.navbar-wrapper-open {
+  height: 100%;
+}
+header {
+  position: relative;
+  padding: 1em 0;
+}
+header::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.first-navbar {
+  background: #000;
+  color: #ebebd3;
+}
+.second-navbar {
+  background: #fff;
+  color: #000;
+}
+.navbar-logo {
+  float: left;
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.navbar-logo span {
+  font-weight: 400;
+}
+.main-navbar {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background: #464655;
+  height: 0;
+  overflow: hidden;
+}
+.main-navbar-open {
+  height: auto;
+}
+.main-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-navbar li {
+  border-bottom: 1px solid #575766;
+}
+.main-navbar li:last-child {
+  border-bottom: none;
+}
+.main-navbar a {
+  color: #000;
+  display: block;
+  padding: 1em 1em;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.main-navbar a:hover,
+.main-navbar a:focus {
+  background: #e4b363;
+  color: #464655;
+}
+.nav-icon {
+  display: inline-block;
+  font-size: 1.3em;
+  margin-right: 0.5em;
+  text-align: center;
+  width: 1.1em;
+  color: rgba(255, 255, 255, 0.45);
+}
+.menu-toggle-button {
+  padding: 1em;
+  position: absolute;
+  top: 0.5em;
+  right: 0.2em;
+  cursor: pointer;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  background: #ebebd3;
+  height: 3px;
+  width: 1.75em;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.open .hamburger {
+  transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+  opacity: 0;
+}
+
+.open .hamburger::after {
+  transform: rotate(90deg) translateY(3px);
+}
+
+@media only screen and (min-width: 700px) {
+  .welcome-text {
+    text-align: left;
+    font-size: 3rem;
+  }
+  .section-hello {
+    align-items: flex-start;
+    padding: 20px 50px;
+  }
+
+  .menu-toggle-button {
+    display: none;
+  }
+
+  .main-navbar {
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: right;
+  }
+
+  .main-navbar li {
+    display: inline-block;
+    border: none;
+  }
+
+  .main-navbar a {
+    padding: 0;
+    margin-left: 2em;
+  }
+
+  .main-navbar a:hover,
+  .main-navbar a:focus {
+    background: transparent;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+}
+
 footer {
-  position: fixed;
-  background-color: red;
+  /* position: fixed; */
+  background-image: linear-gradient(135deg, #febd59, #ead4b1);
   width: 100%;
   left: 0;
   bottom: 0;
