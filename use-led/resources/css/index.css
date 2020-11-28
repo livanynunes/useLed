@@ -127,9 +127,16 @@ section {
   text-align: left;
 }
 
-.section-services {
+.section-projects {
   background-color: white;
 }
+.section-projects-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+}
+
 .section-contact {
   background-color: cadetblue;
 }
